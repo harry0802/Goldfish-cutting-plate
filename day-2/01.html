@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/all-Reset.css">
+    <title>互動圖文卡片</title>
+    <style>
+        img{
+            vertical-align: middle;
+        }
+        .wrap{
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient( to bottom ,rgb(  206, 190, 152,8) ,rgb(201, 138, 79) );
+
+        }
+        .container{
+            display: flex;
+            max-width:1200px;
+            margin: auto;
+            border: 1px solid transparent;
+        }
+        .card{
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        .card-scale{
+            background: #ccc;
+            border-radius: 10px;
+            outline: 1px solid rgba(194, 237, 219, 0.533);
+            outline-offset: -8px;
+            box-shadow: 3px 3px 10px #0008;
+            overflow: hidden;
+        }
+        .pic img{
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .5;
+             transition:transform .6s ;  
+             transition: transform .4s; 
+            
+        }
+        .card-scale:hover > .pic img{
+            transform: scale(1.2);
+        }
+        .card .txt {
+            position: absolute;
+            left: 15px;
+            bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 0 0 1px #000;
+            color: azure;
+        }
+        .card-3d{
+            margin: 0 30px;
+            perspective: 500px;
+        }
+        .card-3d-pic{
+            position: relative;
+            object-fit: cover;
+            outline: 1px solid #ccc;
+            border-radius:10px;
+            transform-style: preserve-3d; 
+            will-change: transform;     
+            transition: transform .5s; 
+        }
+        .card-3d-pic img{
+            border-radius: 10px;
+        }
+        .card-3d:hover> .card-3d-pic
+        {
+            transform: translateZ(10px) 
+            rotateX(20deg) rotateY(30deg);
+        }
+        .card-3d-txt { 
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: rotateY(-50%);
+            color: rgb(216, 161, 155);
+            font-size: 50px;
+            transition: transform .5s; 
+
+
+        }
+        .card-3d:hover > .card-3d-txt{
+            transform: translateZ(70px) 
+            rotateX(20deg) rotateY(30deg);
+        }
+
+        .discoloration img{
+            border-radius: 10px;
+            filter: grayscale(.9);
+            transition: filter .4s;
+        }
+        .discoloration:hover img{
+            filter: grayscale(0);
+
+        }
+        .discoloration-txt{
+            position: absolute;
+            top: 50%;
+            font-size: 30px;
+            font-weight: 600;
+            color: antiquewhite;
+            transform: rotateY(-50%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="card  card-scale">
+                <div class="pic">
+                    <img  src="https://picsum.photos/300/300" alt="">
+                </div>
+                <div class="txt">
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="card card-3d">
+                <div class="card-3d-pic">
+                    <img  src="https://picsum.photos/300/300" alt="">
+                </div>
+                <div class="card-3d-txt">
+                    <h3>3D翻轉</h3>
+                </div>
+            </div>
+            <div class="card discoloration">
+                <div class="discoloration-pic">
+                    <img  src="https://picsum.photos/300/300" alt="">
+                </div>
+                <div class="discoloration-txt">
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
