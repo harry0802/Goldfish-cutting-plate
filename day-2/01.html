@@ -61,14 +61,14 @@
         }
         .card-3d{
             margin: 0 30px;
-            perspective: 500px;
+            perspective:500px;
         }
         .card-3d-pic{
             position: relative;
             object-fit: cover;
             outline: 1px solid #ccc;
             border-radius:10px;
-            transform-style: preserve-3d; 
+            transform-style:preserve-3d; 
             will-change: transform;     
             transition: transform .5s; 
         }
@@ -77,8 +77,10 @@
         }
         .card-3d:hover> .card-3d-pic
         {
-            transform: translateZ(10px) 
-            rotateX(20deg) rotateY(30deg);
+            transform: 
+            translateZ(10px) 
+            rotateX(20deg)
+             rotateY(30deg);
         }
         .card-3d-txt { 
             position: absolute;
