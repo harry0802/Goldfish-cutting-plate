@@ -10,16 +10,14 @@
     <script src="https://kit.fontawesome.com/f552039a7d.js" crossorigin="anonymous"></script>
 </li>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Poppins&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
         *{
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             /* outline: 1px red solid; */
 
-        }
-        p , div{
-            font-family: 'Noto Sans TC', sans-serif;
         }
         img{
             width: 100%;
@@ -28,8 +26,9 @@
         .d-flex{
             display: flex;
         }
-        .wrpa{
+        .wrap{
             width: 100%;
+            /* height: 100vh; */
 
         }
         .container{
@@ -59,6 +58,8 @@
             box-shadow: 0 0 20px #0007;
             overflow: hidden;
             border-radius: 20px;
+            font-family: 'Poppins', sans-serif;
+
         }
         .item:nth-of-type(1) img {
             position: absolute;
@@ -105,6 +106,8 @@
             height: 300px;
             border-radius: 15px;
             overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+
             
         }
         .item:nth-of-type(2) .pic img{
@@ -193,6 +196,8 @@
             border-radius: 20px;
             transition: all .6s ;
             z-index: 10;
+            font-family: 'Poppins', sans-serif;
+
         }
         
         .item:nth-of-type(3) .pic{
@@ -237,6 +242,8 @@
             justify-content: space-between;
             background:transparent;
             overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+
         }
         .item:nth-of-type(4) .pic{
             display: inline-block;
@@ -289,7 +296,7 @@
             appearance: none;
             z-index: 10;
         }
-        #btn::before{
+        .item:nth-of-type(4) #btn::before{
             position: absolute;
             content: "\f060";
             left: 50%;
@@ -299,9 +306,9 @@
             font-weight: 900;
             color:#000;
             transform: translate(-50%,-50%) ;
-            z-index: 1;
+            z-index: 10;
         }
-        #btn:checked:before {
+        .item:nth-of-type(4) #btn:checked:before {
             content: "\f00d";
         }
 
@@ -319,7 +326,7 @@
             transform: translate(100%);
             transition: transform .4s;
         }
-        .item-slider  p{
+        .item:nth-of-type(4) .item-slider  p{
             margin-left: 16px;
             font-weight: bold;
         }
@@ -352,7 +359,145 @@
             color: #0008;
         }
 
+        .item:nth-of-type(5){
+            position: relative;
+            width: 20%;
+            height: 250px;
+            align-content: center;
+            justify-content: center;
+            border-radius: 20px;
+            font-family: 'Josefin Sans', sans-serif;
+            background: #1fc4da;
+            overflow: hidden;
+        }
+        .item:nth-of-type(5) .item-center{
+            text-align: center;
+        }
+        .item:nth-of-type(5) .pic{
+            width: 100%;
+        }
+        .item:nth-of-type(5) .pic img{
+            width: 100px;
+            border-radius: 50%;
 
+        }
+        .item:nth-of-type(5) .txt{
+            width: 100%;
+            font-size: 20px;
+
+        }
+        .item:nth-of-type(5) .user-name{
+            margin-bottom: 10px;
+            font-size: 25px;
+            font-weight: 500;
+            color: #fff;
+        }
+        .item:nth-of-type(5) .txt .skill{
+            color: #e9ebed;
+        }
+        .item:nth-of-type(5) .arr-btn{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            right: 0;
+            bottom: 0;
+            appearance: none;
+            background: #fff;
+            border-radius: 20px  0 20px 0 ;
+            transition: all .4s;
+            
+        }
+        .item:nth-of-type(5) .arr-btn::before{
+            position: absolute;
+            content: "\f062";
+            left: 50%;
+            top: 50%;
+            font-family: "Font Awesome 5 Free"; 
+            font-size: 1.5rem;
+            font-weight: 900;
+            color:#000;
+            transform: translate(-50%,-50%) rotate(140deg) ;
+            z-index: 10;
+        }
+        .item:nth-of-type(5) .active_arr_btn{
+            transform: translate(80%,80%);
+
+
+        }
+        
+        .item:nth-of-type(5) > .item-slider-left {
+            position: absolute;
+            width: 240px;
+            height: 250px;
+            padding: 10px;
+            flex-direction: column;
+            justify-content: center;
+            background: #006092;
+            border-radius: 20px;
+            transition: all .5s;
+            /* top: -210px;
+            left: 40px; */
+        }
+        .item:nth-of-type(5)  .off{
+            transform: translate(-85% ,-85%) rotate(90deg);
+
+        }
+        .item:nth-of-type(5) .active{
+            transform: translate(0% ,0%) rotate(0deg);
+
+        }
+
+
+        .item:nth-of-type(5) .item-slider-left  p{
+            /* margin-top: 40px; */
+            font-size: 25px;
+            color: #fff;
+
+        }
+        .item:nth-of-type(5) .skills{
+            flex-wrap: wrap;
+            margin-top: 20px;
+            color: #fff;
+
+        }
+        .item:nth-of-type(5) .skills div{
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #eee;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        /* .item:nth-of-type(5) .skills div:first-of-type ,
+        .item:nth-of-type(5) .skills div:last-of-type {
+            margin-left: 10px;
+        } */
+        .item:nth-of-type(5) .icons{
+            /* font-size: 40px; */
+            margin: 0;
+            
+        }
+        .item:nth-of-type(5) .icons i{
+            margin-right: 15px;
+            text-decoration: none;
+            font-size: 40px;
+            color: #fff;
+        }
+        .cancel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            bottom: 0;
+            right: 0;
+            background: #fff;
+            border-radius: 20px 0 20px 0;
+        }
+        .cancel{
+            font-size: 1.5rem;
+        }
+        
     </style>
 </head>
 <body>
@@ -408,15 +553,64 @@
                 </div>
             </div>
             <div class="item">
-                <div class="pic">
-                    <img src="https://picsum.photos/200/300" alt="">
+                <div class="item-center">
+                    <div class="pic">
+                        <img class="skill" src="https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-vector-stock-91602499.jpg" alt="">
+                    </div>
+                    <div class="txt">
+                        <p class="user-name">Harry</p>
+                        <p class="skill">Front-end developer</p>
+                    </div>
                 </div>
-                <div class="txt">
-                    <h3>titile</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <!-- <div class="arr-btn"></div> -->
+                <input type="checkbox" name="" id="btn" class="arr-btn">
+                <div class="item-slider-left off d-flex ">
+                    <p>skill:</p>
+                    <div class="skills d-flex">
+                        <div>Html</div>
+                        <div>CSS</div>
+                        <div>JavaScript</div>
+                        <div>Git</div>
+                    </div>
+                    <div class="icons d-flex">
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-line"></i></a>
+                    </div>
+                    <div class="cancel">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+            <script>
+                const ccl = document.querySelector(".cancel");
+                const arr = document.querySelector(".arr-btn");
+                const item_slider = document.querySelector(".item-slider-left ");
+
+                arr.addEventListener("click" , () =>{
+                    arr.classList.add('active_arr_btn');
+                    if (item_slider.classList.contains('off')){
+                        item_slider.classList.remove('off');
+                        item_slider.classList.add('active');
+
+                    };
+                } ); 
+
+                ccl.addEventListener("click" , () =>{
+                    arr.classList.remove('active_arr_btn');
+                    if (item_slider.classList.contains('active')){
+                        item_slider.classList.remove('active');
+                        item_slider.classList.add('off');
+
+
+                    }
+                })
+
+                
+                
+            </script>
 </html>
