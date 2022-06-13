@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景色彩</title>
+    <link rel="stylesheet" href="/all-Reset.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            vertical-align: middle;
+        }
+        .wrap{
+            width: 100%;
+            height: 100vh;
+        }
+        .box_group{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .box-item1{
+            margin: 10px;
+            width: 800px;
+            height: 100px;
+            background: linear-gradient(45deg,#faa 50%,#aaf 50%);
+            background: linear-gradient(to bottom right,#faa ,#aaf );
+        }
+        .box-item2{
+            margin: 10px;
+            width: 600px;
+            height: 600px;
+            background-image: radial-gradient(#ffaaaa ,#aaf);
+            background-image: radial-gradient(100% 100% at center  center,#ffaaaa 50%,#aaf 50%);
+        }
+        .box-item3{
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(circle 100px at center  center,#ffaaaa ,#aaf,#ccc , #eee);
+
+        }
+        .box-item4{
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient( 100% 100% at center , #fcc 20%, 25% , #acc);
+        }
+        .box-item5{
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient( 100% 100%  ,
+                                               #f000 0%,
+                                               #f111 10% , #f222 10%,
+                                               #f333 20% , #f444 20%,
+                                               #f555 30% , #f666 30%,
+                                               #f999 50%      
+                                                 );
+        }
+
+        .box-item6{
+            width: 300px;
+            height: 300px;
+            background-image: conic-gradient(#f1a,#faa );
+            background-image: conic-gradient(from 90deg,#f1a,#faa );
+            background-image: conic-gradient(from 0.5turn,#f1a,#faa );
+            background-image: conic-gradient(from 0.5turn,#f1a,#faa );
+            background-image: conic-gradient(from 0deg,#f1a 33%,#faa 66% ,#aaa 99%) ;
+            background-image: conic-gradient(from 0 at center center,#f1a 0deg,#faa 180deg ,#abf 360deg) ;
+
+
+
+        }
+        .box-item7{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 50%;
+                    border: 2px solid #000;
+                    background-image: conic-gradient( #f111 0% 70%,#f999 70%);
+        }
+        .box-item7 .text{ 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    background: #fff;
+                    border: 2px solid #000;
+                    font-size: 40px;
+
+        }
+        .box-item8{}
+        .box-item9{}
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box_group">
+            <div class="box-item1"></div>
+            <div class="box-item2"></div>
+            <div class="box-item3"></div>
+            <div class="box-item4"></div>
+            <div class="box-item5"></div>
+            <div class="box-item6"></div>
+            <div class="box-item7">
+                <div class="text">
+                    70%
+                </div>
+            </div>
+            <div class="box-item8"></div>
+            <div class="box-item9"></div>
+
+
+        </div>
+    </div>
+</body>
+</html>
