@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex 彈性列計算空間</title>
+    <style>
+        *{
+            box-sizing: content-box;
+            line-height: 1;
+        }
+        .wrap{
+            width: 100%;
+            height: 100vh;
+        }
+        .box{
+            display: flex;
+            width: 1200px;
+            height: 600px;
+            margin:0 auto;
+            flex-wrap: wrap;
+            /* align-items: center; */
+            /* 當彈性列設定方向時 
+                stretch 不在自動分配空間
+            */
+            background: #ccc;
+            /* 
+            彈性列剩餘空間計算值：
+
+            1.取得 flex 剩餘空間：
+            高度 - ( (列第一行，第一物件的字高行數 + margin + padding + border) + (列第二行，第一物件的字高行數 + margin + padding + border) )
+            600 - ( (16 * 7 + 20 +10 ) + (16 + 20 +10) ) = 412px
+
+            2.取得單列可用空間：
+            將剩餘空間除與列數
+            412 / 2 = 206
+
+            3.計算第一列彈性列高度
+            單列可用空間 ＋ 列第一行，第一物件的字高行數 + margin + padding 上下值 ＝ 彈性列高
+            206 + 16 * 7 + 20 + 10  = 348px
+
+            4.計算第二列彈性列高度
+            單列可用空間 ＋ 列第一行，第一物件的字高行數 + margin + padding 上下值 ＝ 彈性列高
+            206 + 16  + 20 + 10  =  252px
+            
+            line-height 會影響計算精準度
+            */
+
+            
+        }
+        .item{
+            width: 300px;
+            margin: 5px;
+            padding: 10px;
+            background: #faa;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        
+        <div class="box">
+            <div class="item">
+               <!-- <h2>box1</h2>  -->
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam magni non repellendus maiores eligendi atque. Non natus molestiae saepe, culpa, dignissimos doloribus unde, perferendis fuga deleniti ut mollitia inventore excepturi.
+            </div>
+            <div class="item">box2</div>
+            <div class="item">box3</div>
+            <div class="item">box4</div>
+            <div class="item">box5</div>
+            <div class="item">box6</div>
+        </div>
+    </div>
+</body>
+</html>
