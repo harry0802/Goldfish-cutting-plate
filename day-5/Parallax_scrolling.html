@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>視差滾動</title>
+    <link rel="stylesheet" href="/all-Reset.css">
+    <style>
+        img{
+            width: 100%;
+            vertical-align: middle;
+        }
+        .wrap{
+            width: 100%;
+            height: 100vh;
+            background: #aaf8;
+            overflow: auto;
+
+        }
+        .container{
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+
+        }
+        .section{
+            width: 100%;
+            height: 300px;
+            font-size: 50px;
+            color: chartreuse;
+            text-align: center;
+            line-height: 300px;
+            border: 1px solid #000;
+            /* background: #ccc8;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; */
+            /*將全部內容簡寫*/
+            background: #ccc8 fixed no-repeat center / cover;
+        }
+        .topic1{
+            background-image: url(/all_pic/1024x1024_850530525467.jpeg);
+        }
+        .topic3{
+            background-image: url(/all_pic/羅兵.jpge.webp);
+
+        }.topic5{
+            background-image: url(/all_pic/5667d3daa8547.jpg_fo742.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+        <div class="section topic1">topic1</div>
+        <div class="section topic2">topic2</div>
+        <div class="section topic3">topic3</div>
+        <div class="section topic4">topic4</div>
+        <div class="section topic5">topic5</div>
+        <div class="section topic6">topic6</div>
+    </div>
+    </div>
+</body>
+</html>
