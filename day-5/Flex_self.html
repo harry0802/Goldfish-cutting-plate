@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_self,order</title>
+    <link rel="stylesheet" href="/all-Reset.css">
+    <style>
+        img{
+            width: 100%;
+        }
+        .card{
+            margin: auto;
+            width: 300px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: #fca;
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+        }
+        .text h3{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: .5em;
+        }
+        .text p:first-of-type{
+            align-self: start;
+            order: -1;
+            margin: .5em 0;
+            padding:5px;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="pic">
+            <img src="/all_pic/很多英雄.jpeg" alt="">
+        </div>
+        <div class="text">
+            <h3>我來當標題</h3>
+            <p>我在標題的前面</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus libero neque rem quo, voluptatibus iste hic illum possimus amet unde ad, quibusdam optio nostrum excepturi, sequi laudantium inventore culpa harum!</p>
+        </div>
+    </div>
+</body>
+</html>
